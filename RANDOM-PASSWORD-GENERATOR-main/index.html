@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+
+    <h1 class="title">
+      <img src="secure-password.png" alt="" width="50px" height="50px"> Password Generator
+    </h1>
+
+    <p class="subtitle">
+      Create a strong random password
+    </p>
+
+    <div class="password-box">
+
+      <input
+        type="text"
+        id="password"
+        readonly
+        placeholder="Your password"
+      >
+
+      <button
+        class="copy-btn"
+        id="copyBtn"
+        type="button"
+      >
+        Copy
+      </button>
+
+    </div>
+
+     <div class="setting">
+
+      <div class="setting-header">
+
+        <label>
+          Password Length
+        </label>
+
+        <span id="lengthValue">
+          16
+        </span>
+
+      </div>
+
+      <input
+        type="range"
+        id="length"
+        min="4"
+        max="64"
+        value="16"
+      >
+
+    </div>
+
+     <div class="setting">
+
+      <div class="setting-header">
+
+        <label>
+          Characters
+        </label>
+
+      </div>
+
+
+      <div class="options">
+
+        <label class="option">
+
+          <input
+            type="checkbox"
+            id="uppercase"
+            checked
+          >
+
+          <span>
+            ABC Uppercase
+          </span>
+
+        </label>
+
+
+        <label class="option">
+
+          <input
+            type="checkbox"
+            id="lowercase"
+            checked
+          >
+
+          <span>
+            abc Lowercase
+          </span>
+
+        </label>
+
+
+        <label class="option">
+
+          <input
+            type="checkbox"
+            id="numbers"
+            checked
+          >
+
+          <span>
+            123 Numbers
+          </span>
+
+        </label>
+
+
+        <label class="option">
+
+          <input
+            type="checkbox"
+            id="symbols"
+            checked
+          >
+
+          <span>
+            !@# Symbols
+          </span>
+
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- STRENGTH -->
+
+    <div class="strength">
+
+      <div class="strength-header">
+
+        <span>
+          Password Strength
+        </span>
+
+        <span id="strengthText">
+          Strong
+        </span>
+
+      </div>
+
+
+      <div class="strength-bar">
+
+        <div id="strengthFill"></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- GENERATE -->
+
+    <button
+      class="generate-btn"
+      id="generateBtn"
+      type="button"
+    >
+      🔄 Generate Password
+    </button>
+
+
+    <div
+      class="message"
+      id="message"
+    ></div>
+
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
